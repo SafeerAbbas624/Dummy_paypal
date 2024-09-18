@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="paypal-container">
+    <div class="header">
+      <img src="{{ url_for('static', filename='img/PayPal-logo.png') }}">
+      <button id="send-button">Send</button>
+      <button id="request-button">Request</button>
+    </div>
+    <div class="balance">
+      <p><span id="balance">{{ "{:,.2f}".format(balance) }}</span></p>
+    <div  id="Available-balance" ><p>Available balance </p>
+    </div>  
+    </div>
+    <div class="transfer-form">
+      <input type="number" id="transfer-amount" placeholder="Enter Amount">
+    </div>
+    <div class="transfer-amount-para">
+      <p >Transfer amount</p>
+    </div>
+    <div class="currency-select">
+      <select >
+        <option value="EU">EU</option>
+        <option value="EU">$</option>
+      </select>
+    </div>
+    <div class="username">
+      <input type="text" id="username" placeholder="Name, @username, Email, Mobile">
+    <div>
+    <div class="send-to-para">
+      <p >Send to</p>
+    </div>
+    <div id="transfer-button">
+      <button >Transfer</button>
+      <div id="paypal-button"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
