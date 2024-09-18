@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+  <div class="paypal-container">
+    <div class="header">
+      <img src="{{ url_for('static', filename='img/PayPal-logo.png') }}">
+      <button id="send-button">Send</button>
+      <button id="request-button">Request</button>
+    </div>
+    <div id="payment-confirmation">
+      <p class="popup"><b>You sent <span id="transfer-amount-display"></span>$ to <span id="username-display"></span><br>Payment will be completed within 3 hours.</b></p>
+      <button id="make-another-payment">Make Another Payment</button>
+      <button id="home-button">Home</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>
